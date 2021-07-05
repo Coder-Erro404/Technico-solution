@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid splash" id="splash">
+  <div class="container">
+  
+      <figure class="text-center">
+            <img src="{% static 'img/gifgit.gif' %}" alt="Portrait of Mr. Roboto" class="profile-image1"> 
+      <h2 class="color">&#9733; PROJECTS &#9733;</h2>
+    </figure>
+  </div>
+</div>
+ {% for project in page_obj  %}
+
+    <section class="blog" id="Blog">
+         <div class="blog-card">
+        <div class="meta">
+        <div class="photo" style="background-image: url({{ project.Img.url }})"></div>      <ul class="details">
+        <li class="author"><a href="#">{{ project.p_name}}</a></li>
+        <li class="date">{{ project.timeStamp }}</li>
+        <li class="tags">
+          <ul>
+            <li><a href="#">Django</a></li>
+            <li><a href="#">Coding</a></li>
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">Bootstrap</a></li>
+            <li><a href="#">JavaScript</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <div class="description">
+      <h3>{{ project.p_name }}</h3>
+      <h4>{{ project.author }}</h4>
+      <p class="truncate"> {{ project.content }}</p>
+      <p class="blue-more">
+        <a href="{{ project.p_url }}"><i class="fa fa-github"> </i> :- {{ project.p_url }}</a>
+      </p>
+      {% comment %} <p class="read-more">
+        <a href="#">Read More</a>
+      </p> {% endcomment %}
+    </div>
+  </div>
+                    </div>
+                    </div>
+                    
+            </section>
+      {% endfor %}
+<center>
+<nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+          </li>
+        {% else %}
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+        {% endif %}
+        {% for i in page_obj.paginator.page_range %}
+          {% if page_obj.number == i %}
+            <li class="page-item active" aria-current="page">
+              <span class="page-link">
+                {{ i }}
+                <span class="sr-only">(current)</span>
+              </span>
+            </li>
+          {% else %}
+            <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+          {% endif %}
+        {% endfor %}
+        {% if page_obj.has_next %}
+          <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+          </li>
+        {% else %}
+          <li class="page-item disabled">
+            <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Next</a>
+          </li>
+        {% endif %}
+      </ul>
+    </nav>
+</center>
+    
+
+
+{% endblock content %}
