@@ -1,2 +1,2 @@
 
-web: gunicorn resume.wsgi
+web: gunicorn technico.wsgi
