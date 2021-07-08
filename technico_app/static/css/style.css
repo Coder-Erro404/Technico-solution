@@ -25,9 +25,11 @@ p {
       padding-inline-start: 40px;
   }
   }*/
+
+  
   .navbar {
     border-bottom: #008ed6 3px solid;
-    opacity: 0.8;
+    
     padding: 0px;
   }
     .logo-blanc
@@ -37,7 +39,7 @@ p {
             height: 50px;
     }
     .bg-dark {
-        background-color: #ea761a!important;
+        background-color: #9dd3ff!important;
       }
       .navbar-dark .navbar-nav .nav-link {
           color: rgb(4 0 0);
