@@ -51,7 +51,7 @@ body{
   }
   
   .title{
-  font-size:2.4em;
+  font-size:1.9em;
   }
   
   .sub-title{
@@ -183,14 +183,14 @@ body{
   box-shadow:0px 6px 16px -6px rgba(1,1,1,0.5);
   background:#fff;
   border-radius:40px;
-  padding:20px;
+  padding:4px;
   transition:0.5s;
   border-top:1px solid #d80b1a;
   }
   
   header .nav a{
   display:inline-block;
-  margin:0px 20px;
+  margin:0px 15px;
   text-decoration:none;
   color:#000;
   transition:0.5s;
@@ -358,7 +358,7 @@ body{
   width: 100%;
   display: block;
   z-index:999;
-  padding:10px 0px;
+  padding:0px 0px;
   transition: top 0.3s;
   box-shadow:0px 6px 16px -6px rgba(1,1,1,0.5);
   }
@@ -368,7 +368,7 @@ body{
   display: block;
   color: #000;
   text-align: center;
-  padding: 15px;
+  padding: 10px;
   text-decoration: none;
   font-size: 17px;
   font-weight:400;
@@ -383,7 +383,7 @@ body{
   border:0;
   outline:0;
   font-size:17px;
-  margin:20px 10px;
+  margin:12px 10px;
   font-family: 'Yusei Magic', sans-serif;
   transition:0.5s;
   } 
@@ -410,7 +410,7 @@ body{
   display:none;
   }
   header .nav a.active{
-  width:200px;
+  width:205px;
   }
   header .nav{
   position:fixed;
