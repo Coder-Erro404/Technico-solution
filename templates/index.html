@@ -8,10 +8,9 @@
 <tr>
 <td>
 <section>
-<em>WELCOME TO TECHNICO SOLUTION</em>
-<h1 class="title ml9">
-<span class="text-wrapper">
-<span class="letters"> Computer Hardware & Web Design</span>
+<h3>Welcome Technico Solution</h3>
+
+<h1 class="intro-text"><span class="typed-text" id="typed"> </span><span class="cursor">&nbsp;</span></h1>
 </span>
 </h1>
 <h5 class="sub-title">We have knowledge  Computer repair specialists , deep understanding of the mechanics 
@@ -19,63 +18,78 @@ and programming systems of computers in order to identify and fix problems </h5>
 <a href="#" class="btn1">Check Services</a>
 </section>
 </td>
-
-</tr>
+{% comment %} <td>
+<img src="{% static 'img/H&S.jpg' %}" alt="">
+</td>
+</tr> {% endcomment %}
 </table>
 </div>
 
 
 <!--SECTION1-->
 <section class="section1">
-<!--******PRICE CARDS******-->
-
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Raleway:wght@300&family=Recursive:wght@500&display=swap" rel="stylesheet">  
-
-<div class="price_cards">
-<!--CARD_BEGINING-->
-<div class="card card_1">
-<img src="{% static 'img/H&S.jpg' %}" class="badge" alt="STATER">
-<h1 class="title">Professional</h1>
-<span class="sub-title">$2,000 por año</span>
-<section>
-<ul>
-<li>25GB disco NVMe</li>
-<li>25GB JetBackup</li>
+<center><h1>Services</h1></center>
+<ul class="card-list">
+	
+	<li class="card">
+		<a class="card-image" href="hardware" target="_blank" style="background-image: url({% static 'img/1.jpg'%});"data-image-full="{% static 'img/1.jpg'%}" >
+			<img src="" alt="Hardware" />
+		</a>
+		<a class="card-description" href="{% static 'img/1.jpg'%}" target="_blank">
+			<h2>Computer Hardware</h2>
+			<p>Japanese Breakfast</p>
+		</a>
+	</li>
+	
+	<li class="card">
+		<a class="card-image" href="https://inlovewithaghost.bandcamp.com/album/lets-go" target="_blank" style="background-image: url({% static 'img/Laptop.jpg'%});" data-image-full="{% static 'img/Laptop.jpg'%}">
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-100.jpg" alt="let's go" />
+		</a>
+		<a class="card-description" href="https://inlovewithaghost.bandcamp.com/album/lets-go" target="_blank">
+			<h2>New Laptop</h2>
+			<p>In Love With A Ghost</p>
+		</a>
+	</li>
+	
+	<li class="card">
+		<a class="card-image" href="https://vulfpeck.bandcamp.com/album/the-beautiful-game" target="_blank" style="background-image: url({% static 'img/Desktop.jpg'%});" data-image-full="{% static 'img/Desktop.jpg'%}">
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-100.jpg" alt="The Beautiful Game" />
+		</a>
+		<a class="card-description" href="https://vulfpeck.bandcamp.com/album/the-beautiful-game" target="_blank">
+			<h2>Desktop</h2>
+			<p>Vulfpeck</p>
+		</a>
+	</li>
+	
+	<li class="card">
+		<a class="card-image" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank" style="background-image: url({% static 'img/Webdesign.jpg'%});" data-image-full="{% static 'img/Webdesign.jpg'%}">
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg" alt="Jane Doe" />
+		</a>
+		<a class="card-description" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank">
+			<h2>Web Design</h2>
+			<p>Converge</p>
+		</a>
+	</li>
+  	<li class="card">
+		<a class="card-image" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg);" data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-500.jpg">
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg" alt="Jane Doe" />
+		</a>
+		<a class="card-description" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank">
+			<h2>Computer Accessories</h2>
+			<p>Converge</p>
+		</a>
+	</li>
+  	<li class="card">
+		<a class="card-image" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank" style="background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg);" data-image-full="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-500.jpg">
+			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg" alt="Jane Doe" />
+		</a>
+		<a class="card-description" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank">
+			<h2>Jane Doe</h2>
+			<p>Converge</p>
+		</a>
+	</li>
+	
 </ul>
-<button class="btn1">Ver Detalles</button>
-</section>
-</div>
-<!--CARD_ENDS-->
-<!--CARD_BEGINING-->
-<div class="card card_2">
-<img src="https://i.ibb.co/DQR0Mzt/silver.png" class="badge" alt="PREMIUM">
-<h1 class="title">Premium</h1>
-<span class="sub-title">$2,000 por año</span>
-<section>
-<ul>
-<li>25GB disco NVMe</li>
-<li>25GB JetBackup</li>
-</ul>
-<button class="btn1">Ver Detalles</button>
-</section>
-</div>
-<!--CARD_ENDS-->
-<!--CARD_BEGINING-->
-<div class="card card_3">
-<img src="https://i.ibb.co/Nmh4LR0/gold.png" class="badge" alt="UNLIMITED">
-<h1 class="title">Unlimited</h1>
-<span class="sub-title">$2,000 por año</span>
-<section>
-<ul>
-<li>25GB disco NVMe</li>
-<li>25GB JetBackup</li>
-</ul>
-<button class="btn1">Ver Detalles</button>
-</section>
-</div>
-<!--CARD_ENDS-->
-</div>
 </section>
 
 
