@@ -481,7 +481,7 @@ body{
   /* Lazy Load Styles */
 .card-image {
 	display: block;
-	min-height: 20rem; /* layout hack */
+	min-height: 15rem; /* layout hack */
 	background: #fff center center no-repeat;
 	background-size: cover;
 	filter: blur(3px); /* blur the lowres image */
@@ -513,7 +513,6 @@ html, body {
 .card-list {
 	display: block;
 	margin: 1rem auto;
-	padding: 0;
 	font-size: 0;
 	text-align: center;
 	list-style: none;
@@ -590,7 +589,8 @@ html, body {
   }
   
   .section2 .cards{
-  width:95%;
+  width:100%;
+  text-align: center;
   margin:auto;
   }
   
