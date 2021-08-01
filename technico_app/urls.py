@@ -13,5 +13,7 @@ urlpatterns = [
     path('impotantImage', views.impotantImages , name='impotantImage'),
     # path('addblog', views.addblogs),
     path('contact', views.contact, name='contact'),
+    path('hardware', views.hardware, name='hardware'),
+    path('laptop', views.laptop, name='laptop'),
    ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

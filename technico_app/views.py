@@ -12,8 +12,15 @@ from technico_app.filter import UserFilter
 def index(request):
 
 	return render(request, 'index.html')
-	 
 
+def hardware(request):
+
+	return render(request, 'hardware.html')
+
+def laptop(request):
+
+	return render(request, 'laptop.html')
+	 
 def projects(request):
     data = project.objects.all()
     paginator = Paginator(data, 3) # Show 25 contacts per page.

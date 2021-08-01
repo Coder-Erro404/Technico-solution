@@ -484,7 +484,7 @@ body{
 	min-height: 15rem; /* layout hack */
 	background: #fff center center no-repeat;
 	background-size: cover;
-	filter: blur(3px); /* blur the lowres image */
+
 }
 
 .card-image > img {
