@@ -15,5 +15,11 @@ urlpatterns = [
     path('contact', views.contact, name='contact'),
     path('hardware', views.hardware, name='hardware'),
     path('laptop', views.laptop, name='laptop'),
+    path('computer', views.computer, name='computer'),
+    path('webdesign', views.webdesign, name='webdesign'),
+    path('accessories', views.accessories, name='accessories'),
+    path('refurbished', views.refurbished, name='refurbished'),
+    path('cctv', views.cctv, name='cctv'),
+    path('repairing', views.repairing, name='repairing'),
    ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

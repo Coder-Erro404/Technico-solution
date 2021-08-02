@@ -20,6 +20,30 @@ def hardware(request):
 def laptop(request):
 
 	return render(request, 'laptop.html')
+
+def computer(request):
+
+	return render(request, 'computer.html')
+
+def webdesign(request):
+
+	return render(request, 'webdesign.html')
+
+def accessories(request):
+
+	return render(request, 'accessories.html')
+
+def refurbished(request):
+
+	return render(request, 'refurbished.html')
+
+def cctv(request):
+
+	return render(request, 'cctv.html')
+
+def repairing(request):
+
+	return render(request, 'repairing.html')
 	 
 def projects(request):
     data = project.objects.all()
