@@ -24,94 +24,84 @@ and programming systems of computers in order to identify and fix problems </h5>
 </tr> {% endcomment %}
 </table>
 </div>
-
-<!--SECTION1-->
-<section class="section1">
-<center><h1>Services</h1></center>
-<ul class="card-list">
+	<center> <h1> Services</h1></center>
+<main class="grid">
 	
-	<li class="card">
-		<a class="card-image" href="hardware" target="_blank" style="background-image: url({% static 'img/1.jpg'%});" data-image-full="{% static 'img/1.jpg'%}">
-			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-100.jpg" alt="let's go" />
-		</a>
-		<a class="card-description" href="Laptop" target="_blank">
-			<h2>Computer Hardware</h2>
-			
-		</a>
-	</li>
-	
-	<li class="card">
-		<a class="card-image" href="Laptop" target="_blank" style="background-image: url({% static 'img/Laptop.jpg'%});" data-image-full="{% static 'img/Laptop.jpg'%}">
-			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/lets-go-100.jpg" alt="let's go" />
-		</a>
-		<a class="card-description" href="https://inlovewithaghost.bandcamp.com/album/lets-go" target="_blank">
-			<h2>Laptop</h2>
-			
-		</a>
-	</li>
-	
-	<li class="card">
-		<a class="card-image" href="https://vulfpeck.bandcamp.com/album/the-beautiful-game" target="_blank" style="background-image: url({% static 'img/Desktop.jpg'%});" data-image-full="{% static 'img/Desktop.jpg'%}">
-			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/beautiful-game-100.jpg" alt="The Beautiful Game" />
-		</a>
-		<a class="card-description" href="https://vulfpeck.bandcamp.com/album/the-beautiful-game" target="_blank">
-			<h2>Desktop</h2>
-			
-		</a>
-	</li>
-	
-	<li class="card">
-		<a class="card-image" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank" style="background-image: url({% static 'img/design.jpg'%});" data-image-full="{% static 'img/design.jpg'%}">
-			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg" alt="Jane Doe" />
-		</a>
-		<a class="card-description" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank">
-			<h2>Web Design</h2>
-			
-		</a>
-	</li>
-  	<li class="card">
-		<a class="card-image" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank" style="background-image: url({% static 'img/acce.jpg'%});" data-image-full="{% static 'img/acce.jpg'%}">
-			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg" alt="Jane Doe" />
-		</a>
-		<a class="card-description" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank">
-			<h2>Computer Accessories</h2>
-			
-		</a>
-	</li>
-  	<li class="card">
-		<a class="card-image" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank" style="background-image: url({% static 'img/acceriese.jpg'%});" data-image-full="{% static 'img/acceriese.jpg'%}">
-			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg" alt="Jane Doe" />
-		</a>
-		<a class="card-description" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank">
-			<h2>Refurbished Product</h2>
-			
-		</a>
-	</li>
-	  	<li class="card">
-		<a class="card-image" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank" style="background-image: url({% static 'img/cctv.jpg'%});" data-image-full="{% static 'img/cctv.jpg'%}">
-			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg" alt="Jane Doe" />
-		</a>
-		<a class="card-description" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank">
-			<h2>CCTV Setup</h2>
-			
-		</a>
-	</li>
-		  	<li class="card">
-		<a class="card-image" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank" style="background-image: url({% static 'img/repaire.jpg'%});" data-image-full="{% static 'img/repaire.jpg'%}">
-			<img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/310408/jane-doe-100.jpg" alt="Jane Doe" />
-		</a>
-		<a class="card-description" href="https://convergecult.bandcamp.com/album/jane-doe" target="_blank">
-			<h2>Computer Repairing</h2>
-			
-		</a>
-	</li>
-	
-</ul>
-</section>
-
-
-
-
+        <article>
+		  <a  href="hardware">
+            <img src="{% static 'img/1.jpg'%}" alt="Sample photo"></a>
+            <a href="hardware"><div class="text">
+              <h3>hardware</h3>
+             
+              <button type="button" style= "cursor:pointer" onclick="window.location.href='hardware'" >Click Here</button>
+            </div></a>
+          </article>
+		<article>
+		  <a  href="laptop">
+            <img src="{% static 'img/laptop.jpg'%}" alt="Sample photo"></a>
+            <a href="laptop"><div class="text">
+              <h3>Laptop</h3>
+             
+              <button type="button" style= "cursor:pointer" onclick="window.location.href='hardware'" >Click Here</button>
+            </div></a>
+          </article>
+		<article>
+		  <a  href="computer">
+            <img src="{% static 'img/Desktop.jpg'%}" alt="Sample photo"></a>
+            <a href="computer"><div class="text">
+              <h3>Computer</h3>
+             
+              <button type="button" style= "cursor:pointer" onclick="window.location.href='hardware'" >Click Here</button>
+            </div></a>
+          </article>
+		<article>
+		  <a  href="webdesign">
+            <img src="{% static 'img/design.jpg'%}" alt="Sample photo"></a>
+            <a href="webdesign"><div class="text">
+              <h3>Web Design</h3>
+             
+              <button type="button" style= "cursor:pointer" onclick="window.location.href='hardware'" >Click Here</button>
+            </div></a>
+          </article>
+		<article>
+		  <a  href="accessories">
+            <img src="{% static 'img/acce.jpg'%}" alt="Sample photo"></a>
+            <a href="accessories"><div class="text">
+              <h3>Accessories</h3>
+             
+              <button type="button" style= "cursor:pointer" onclick="window.location.href='hardware'" >Click Here</button>
+            </div></a>
+          </article>
+		<article>
+		  <a  href="refurbished">
+            <img src="{% static 'img/acceriese.jpg'%}" alt="Sample photo"></a>
+            <a href="refurbished"><div class="text">
+              <h3>refurbished</h3>
+             
+              <button type="button" style= "cursor:pointer" onclick="window.location.href='hardware'" >Click Here</button>
+            </div></a>
+          </article>
+		<article>
+		  <a  href="cctv">
+            <img src="{% static 'img/cctv.jpg'%}" alt="Sample photo"></a>
+            <a href="cctv"><div class="text">
+              <h3>cctv</h3>
+             
+              <button type="button" style= "cursor:pointer" onclick="window.location.href='hardware'" >Click Here</button>
+            </div></a>
+          </article>
+		<article>
+		  <a  href="repairing">
+            <img src="{% static 'img/repaire.jpg'%}" alt="Sample photo"></a>
+            <a href="repairing"><div class="text">
+              <h3>repairing</h3>
+             
+              <button type="button" style= "cursor:pointer" onclick="window.location.href='hardware'" >Click Here</button>
+            </div></a>
+          </article>  
+		
+		  
+        </main>
 
 
 
