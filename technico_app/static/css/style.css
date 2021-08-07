@@ -414,16 +414,11 @@ body{
   }
   }
   
-  
-  
-  
-  
-  
-  
+
   /*CONTAINER*/
   .container{
   width:100%;
-  height:80vh;
+  height:100vh;
   background-image:url("/static/img/background.jpg");
   background-size:100% 100%;
   position:relative;
@@ -626,16 +621,15 @@ body{
   }
   
   .container section{
-  position:relative;
-  top:20vh;
-  height:60vh;
-  padding: 10px;
+    position: relative;
+    top: 8vh;
+    padding: 4px;
   }
   
   .container img{
   width:100%;
   position:relative;
-  top:10vh;
+  top:0vh;
   }
   
   .section2 .cards .card{
@@ -796,3 +790,7 @@ body{
     text-align: center;
   }
 }
+
+
+
+
