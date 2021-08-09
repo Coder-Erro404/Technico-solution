@@ -45,6 +45,10 @@ def repairing(request):
 
 	return render(request, 'repairing.html')
 	 
+def newtechnology(request):
+
+	return render(request, 'newtechnology.html')
+     
 def projects(request):
     data = project.objects.all()
     paginator = Paginator(data, 3) # Show 25 contacts per page.

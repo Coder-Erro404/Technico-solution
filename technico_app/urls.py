@@ -21,5 +21,6 @@ urlpatterns = [
     path('refurbished', views.refurbished, name='refurbished'),
     path('cctv', views.cctv, name='cctv'),
     path('repairing', views.repairing, name='repairing'),
+    path('newtechnology', views.newtechnology, name='newtechnology'),
    ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
