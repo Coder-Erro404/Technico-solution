@@ -1,37 +1,24 @@
 {% extends "base.html" %}
 {% load static %}
 {% block content %}
-<div class="container">
-<section class="section1">
-  <div class="row ">
-  <br>
-    <div class="col-md-9 ml-md-auto">
-
-    <h1 style="color:red; text-align:center;">&#9733; Lates Blogs &#9733; </h1>
-     {% for blog in page_obj  %}
-  <div class="row1 filterDiv ">
-    <div class="color" ><h3>{{ blog.header }}</h3></div>
-    <div ><h5>By:-{{ blog.Author }} </h5></div>
-    <div ><div class="date">{{ blog.timeStamp }}</div>
-    <div class=" truncate"><p>{{ blog.content|safe }} </p></div></div>
+<div class="section2">
+<center><h1> Blog </h1></center>
+{% for blog in page_obj  %}
+<div class="blog-card">
+    <div class="meta">
+      <div class="photo" style="background-image: url({{ blog.Img.url }})"></div>
+     
     </div>
-      {% endfor %}
-  
+    <div class="description">
+				<h1>{{ blog.header }}</h1>
+      <h2>By:-{{ blog.Author }} {{ blog.timeStamp }}</h2>
+      <p>{{ blog.content|safe }}</p>
+      <p class="read-more">
+        <a href="#">READ MORE</a>
+      </p>
     </div>
-    <div class="col-md-3 ml-md-auto ">
-     <hr>
-    	<section class="Categories">
-		<h2>Categories</h2>
-        <form method="get">
-    {{ filter.form.as_p }}
-   <center> <button type="submit">Search</button></center>
-  </form>
-  
-	</section>
-  <hr>
-    </div>
-    
   </div>
+{% endfor %}
   <hr>
 
 <center>
@@ -71,6 +58,8 @@
     </nav>
 </center>
 </div>
-</div>
+
+
+
 
 {% endblock content %}

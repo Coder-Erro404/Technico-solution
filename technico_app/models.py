@@ -38,6 +38,7 @@ class blog(models.Model):
      header= models.CharField(max_length=500)
      cat= models.CharField( max_length=1,choices = Catagory_CHOICES)
      Author= models.CharField(max_length=255)
+     Img = models.FileField(upload_to='add_images')
      content= RichTextField()
      timeStamp=models.DateTimeField(auto_now_add=True, blank=True)
      def __str__(self):
