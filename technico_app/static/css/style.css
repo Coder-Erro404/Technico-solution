@@ -419,7 +419,7 @@ body{
   .container{
   width:100%;
   height:100vh;
-  background-image:url("/static/img/bg.gif");
+  background-color:white;
   background-size:100% 100%;
   position:relative;
   }
@@ -1204,3 +1204,74 @@ body{
   }
   
   /* blog end */
+
+  
+/* page Pagination */
+
+
+.pagination>li {
+  display: inline;
+  padding: 10px;
+}
+
+.pagination a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 20px;
+}
+
+.pagination a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.pagination .next {
+  background-color: #04AA6D;
+  color: white;
+}
+
+.pagination .round {
+  border-radius: 50%;
+}
+
+.pagination {
+  position:relative;
+  left:-20px;
+  padding: 10px;
+  }
+
+  .pagination .active, .btn:hover {
+    background-color: #04AA6D;
+    color: white;
+    border-radius: 50px;
+  }
+  /* .truncate .more-text{
+    display: block;
+  
+  
+  } */
+  .more
+  {
+      color: red;
+      font-size: 15px;
+      font-weight: bold;
+      
+  }
+  .less
+  {
+      color: red;
+      font-size: 15px;
+      font-weight: bold;
+  }
+
+  
+
+
+
+  
