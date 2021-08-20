@@ -2,9 +2,23 @@
 {% load static %}
 {% block content %}
 <div class="container">
-<section class="section1">
-<h1>gfdgs</h1>
-</section>
+<center><h1> hardware</h1></center>
+  <main class="grid">
+  {% for product in page_obj  %}
+    <article>
+      <img src="{{ product.product_image.url }}" alt="tshirt photo">
+      <div class="text">
+        <h3>{{ product.product_name }}</h3>
+        <p style="font-size: 30px; line-height: 0.0em;margin: 0px;"><i class="fa fa-inr"></i><a style="color:red;">{{ product.product_price }}</a></p>
+        <p>{{ product.content|safe }}</p>
+        <a class="shareWhatsapp" target="_blank" data-message="{{ product.content|safe }}"  href="https://wa.me/8898887276"><i class="fa fa-whatsapp"></i></a>
+      </div>
+    </article>
+    
+{% endfor %}
+
+    
+  </main>
 </div>
 
 {% endblock content %}

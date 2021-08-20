@@ -44,6 +44,17 @@ class blog(models.Model):
      def __str__(self):
       return "header"+ " :  "+ self.header 
 
+class product(models.Model):
+     sno= models.AutoField(primary_key=True)
+     cat= models.CharField( max_length=1,choices = Catagory_CHOICES)
+     product_name= models.CharField(max_length=500)
+     product_price= models.CharField(max_length=100)
+     product_image = models.FileField(upload_to='add_images')
+     content= RichTextField()
+     timeStamp=models.DateTimeField(auto_now_add=True, blank=True)
+     def __str__(self):
+      return "product_name"+ " :  "+ self.product_name 
+
 class Document(models.Model):
      sno= models.AutoField(primary_key=True)
      header= models.CharField(max_length=500)

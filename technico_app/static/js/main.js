@@ -127,3 +127,23 @@ $(document).ready(function() {
 // read end
 
 
+/* Preloader after 3second adding none class and removing preloader*/
+setTimeout(function(){ 
+  document.getElementById("loading").classList.add("none");
+}, 3000);
+
+
+const sendViaWhatsapp = () => {
+  const a = document.querySelectorAll(".shareWhatsapp");
+    a.forEach(el => {
+          const text = el.getAttribute('data-message'),
+          url= el.getAttribute('data-url'),
+           link = (el.hasAttribute('data-url') ? url : window.location.href);
+          el.setAttribute("href", `https://api.whatsapp.com/send?text=${text}: ${link}`);
+    })
+  }
+  
+  
+  sendViaWhatsapp();
+  
+  

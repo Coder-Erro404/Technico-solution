@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.contrib import  messages
-from .models import Contact, project  , blog , Document, addnote ,impotantImage
+from .models import Contact, product, project  , blog , Document, addnote ,impotantImage
 from django.contrib import  messages
 from django.core.paginator import Paginator
 from django.core.paginator import EmptyPage
@@ -14,8 +14,24 @@ def index(request):
 	return render(request, 'index.html')
 
 def hardware(request):
+    user_list = product.objects.all().order_by('-timeStamp')
+    user_filter = UserFilter(request.GET, queryset=user_list)
+    user_list = user_filter.qs
+    page = request.GET.get('page')
+    paginator = Paginator(user_list, 3)
+    try:
+        page_obj = paginator.page(page)
+    except PageNotAnInteger:
+        page_obj = paginator.page(1)
+    except EmptyPage:
+        page_obj = paginator.page(paginator.num_pages)
+    arg = {'filter':user_filter, 'page_obj':page_obj}  
+    return render(request, 'hardware.html', arg)
 
-	return render(request, 'hardware.html')
+	
+
+
+
 
 def laptop(request):
 
