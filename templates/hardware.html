@@ -2,7 +2,7 @@
 {% load static %}
 {% block content %}
 <div class="container">
-<center><h1> hardware</h1></center>
+<center><h3> hardware</h3></center>
   <main class="grid">
   {% for product in page_obj  %}
     <article>
@@ -18,6 +18,8 @@
           
         <button type="submit"> 
             <i class="fa fa-whatsapp"></i></button>
+            <a target="_blank" href="{{ product.link_for_index }}"><i class="fa fa-facebook"></i></a></button>
+            
       </form>
     </div>
               

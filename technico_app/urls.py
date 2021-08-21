@@ -22,5 +22,6 @@ urlpatterns = [
     path('cctv', views.cctv, name='cctv'),
     path('repairing', views.repairing, name='repairing'),
     path('newtechnology', views.newtechnology, name='newtechnology'),
+    path('productinfo', views.productinfo, name='productinfo'),
    ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

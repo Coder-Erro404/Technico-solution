@@ -28,14 +28,15 @@ def hardware(request):
     arg = {'filter':user_filter, 'page_obj':page_obj}  
     return render(request, 'hardware.html', arg)
 
-	
-
-
 
 
 def laptop(request):
 
 	return render(request, 'laptop.html')
+
+def productinfo(request):
+
+	return render(request, 'productinfo.html')
 
 def computer(request):
 
