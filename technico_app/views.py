@@ -13,54 +13,131 @@ def index(request):
 
 	return render(request, 'index.html')
 
-def hardware(request):
-    user_list = product.objects.all().order_by('-timeStamp')
-    user_filter = UserFilter(request.GET, queryset=user_list)
-    user_list = user_filter.qs
-    page = request.GET.get('page')
-    paginator = Paginator(user_list, 3)
-    try:
-        page_obj = paginator.page(page)
-    except PageNotAnInteger:
-        page_obj = paginator.page(1)
-    except EmptyPage:
-        page_obj = paginator.page(paginator.num_pages)
-    arg = {'filter':user_filter, 'page_obj':page_obj}  
-    return render(request, 'hardware.html', arg)
-
-
+def hardware(request  ):
+        user_list = product.objects.all().order_by('-timeStamp').filter(cat=1)
+        user_filter = UserFilter(request.GET, queryset=user_list)
+        user_list = user_filter.qs
+        page = request.GET.get('page')
+        paginator = Paginator(user_list, 16)
+        try:
+            page_obj = paginator.page(page)
+        except PageNotAnInteger:
+            page_obj = paginator.page(1)
+        except EmptyPage:
+            page_obj = paginator.page(paginator.num_pages)
+        arg = {'filter':user_filter, 'page_obj':page_obj}  
+        return render(request, 'hardware.html', arg)
 
 def laptop(request):
+        user_list = product.objects.all().order_by('-timeStamp').filter(cat=2)
+        user_filter = UserFilter(request.GET, queryset=user_list)
+        user_list = user_filter.qs
+        page = request.GET.get('page')
+        paginator = Paginator(user_list, 16)
+        try:
+            page_obj = paginator.page(page)
+        except PageNotAnInteger:
+            page_obj = paginator.page(1)
+        except EmptyPage:
+            page_obj = paginator.page(paginator.num_pages)
+        arg = {'filter':user_filter, 'page_obj':page_obj}  
+        return render(request, 'laptop.html', arg)
 
-	return render(request, 'laptop.html')
 
 def productinfo(request):
 
 	return render(request, 'productinfo.html')
 
 def computer(request):
-
-	return render(request, 'computer.html')
-
+        user_list = product.objects.all().order_by('-timeStamp').filter(cat=3)
+        user_filter = UserFilter(request.GET, queryset=user_list)
+        user_list = user_filter.qs
+        page = request.GET.get('page')
+        paginator = Paginator(user_list, 16)
+        try:
+            page_obj = paginator.page(page)
+        except PageNotAnInteger:
+            page_obj = paginator.page(1)
+        except EmptyPage:
+            page_obj = paginator.page(paginator.num_pages)
+        arg = {'filter':user_filter, 'page_obj':page_obj}  
+        return render(request, 'computer.html', arg)
+	
 def webdesign(request):
-
-	return render(request, 'webdesign.html')
+        user_list = product.objects.all().order_by('-timeStamp').filter(cat=4)
+        user_filter = UserFilter(request.GET, queryset=user_list)
+        user_list = user_filter.qs
+        page = request.GET.get('page')
+        paginator = Paginator(user_list, 16)
+        try:
+            page_obj = paginator.page(page)
+        except PageNotAnInteger:
+            page_obj = paginator.page(1)
+        except EmptyPage:
+            page_obj = paginator.page(paginator.num_pages)
+        arg = {'filter':user_filter, 'page_obj':page_obj}  
+        return render(request, 'webdesign.html', arg)
 
 def accessories(request):
-
-	return render(request, 'accessories.html')
+        user_list = product.objects.all().order_by('-timeStamp').filter(cat=5)
+        user_filter = UserFilter(request.GET, queryset=user_list)
+        user_list = user_filter.qs
+        page = request.GET.get('page')
+        paginator = Paginator(user_list, 16)
+        try:
+            page_obj = paginator.page(page)
+        except PageNotAnInteger:
+            page_obj = paginator.page(1)
+        except EmptyPage:
+            page_obj = paginator.page(paginator.num_pages)
+        arg = {'filter':user_filter, 'page_obj':page_obj}  
+        return render(request, 'accessories.html', arg)
 
 def refurbished(request):
-
-	return render(request, 'refurbished.html')
+        user_list = product.objects.all().order_by('-timeStamp').filter(cat=6)
+        user_filter = UserFilter(request.GET, queryset=user_list)
+        user_list = user_filter.qs
+        page = request.GET.get('page')
+        paginator = Paginator(user_list, 16)
+        try:
+            page_obj = paginator.page(page)
+        except PageNotAnInteger:
+            page_obj = paginator.page(1)
+        except EmptyPage:
+            page_obj = paginator.page(paginator.num_pages)
+        arg = {'filter':user_filter, 'page_obj':page_obj}  
+        return render(request, 'refurbished.html', arg)
 
 def cctv(request):
-
-	return render(request, 'cctv.html')
+        user_list = product.objects.all().order_by('-timeStamp').filter(cat=7)
+        user_filter = UserFilter(request.GET, queryset=user_list)
+        user_list = user_filter.qs
+        page = request.GET.get('page')
+        paginator = Paginator(user_list, 16)
+        try:
+            page_obj = paginator.page(page)
+        except PageNotAnInteger:
+            page_obj = paginator.page(1)
+        except EmptyPage:
+            page_obj = paginator.page(paginator.num_pages)
+        arg = {'filter':user_filter, 'page_obj':page_obj}  
+        return render(request, 'cctv.html', arg)
 
 def repairing(request):
-
-	return render(request, 'repairing.html')
+        user_list = product.objects.all().order_by('-timeStamp').filter(cat=8)
+        user_filter = UserFilter(request.GET, queryset=user_list)
+        user_list = user_filter.qs
+        page = request.GET.get('page')
+        paginator = Paginator(user_list, 16)
+        try:
+            page_obj = paginator.page(page)
+        except PageNotAnInteger:
+            page_obj = paginator.page(1)
+        except EmptyPage:
+            page_obj = paginator.page(paginator.num_pages)
+        arg = {'filter':user_filter, 'page_obj':page_obj}  
+        return render(request, 'repairing.html', arg)
+	
 	 
 def newtechnology(request):
 

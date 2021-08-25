@@ -2,9 +2,73 @@
 {% load static %}
 {% block content %}
 <div class="container">
-<section class="section1">
-<h1>gfdgs</h1>
-</section>
+<center><h3> Laptop</h3></center>
+  <main class="grid">
+  {% for product in page_obj  %}
+    <article>
+      <img src="{{ product.product_image.url }}" alt="tshirt photo">
+      <div class="text">
+        <h3>{{ product.product_name }}</h3>
+        <p style="font-size: 30px; line-height: 0.0em;margin: 0px;"><i class="fa fa-inr"></i><a style="color:red;">{{ product.product_price }}</a></p>
+        <p>{{ product.content|safe }}</p>
+      <a> 
+      <div >
+      <form target="_blank" method="get" action="https://wa.me/+918898887276">
+          <input type="checkbox" name="text" value="{{ product.content }}" checked>
+          
+        <button type="submit"> 
+            <i class="fa fa-whatsapp"></i></button>
+            <a target="_blank" href="{{ product.link_for_index }}"><i class="fa fa-facebook"></i></a></button>
+            
+      </form>
+    </div>
+              
+        </a>
+      </div>
+    </article>
+    
+{% endfor %}
+ 
+  </main>
+<center>
+
+<div class="abc">
+<nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-center">
+        {% if page_obj.has_previous %}
+          <li class="page-item">
+            <a class="previous page-link" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+          </li>
+        {% else %}
+          <li class="page-item disabled">
+            <a class="previous  page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+          </li>
+        {% endif %}
+        {% for i in page_obj.paginator.page_range %}
+          {% if page_obj.number == i %}
+            <li class="page-item active" aria-current="page">
+              <span class="page-link">
+                {{ i }}
+                <span class="sr-only">(current)</span>
+              </span>
+            </li>
+          {% else %}
+            <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+          {% endif %}
+        {% endfor %}
+        {% if page_obj.has_next %}
+          <li class="page-item">
+            <a class="next page-link" href="?page={{ page_obj.next_page_number }}">Next</a>
+          </li>
+        {% else %}
+          <li class="page-item disabled">
+            <a class="next  page-link" href="#" tabindex="-1" aria-disabled="true">Next</a>
+          </li>
+        {% endif %}
+      </ul>
+    </nav>
+    </div>
+</center>
 </div>
 
 {% endblock content %}

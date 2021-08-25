@@ -2,12 +2,14 @@ from django.db import models
 from ckeditor.fields import RichTextField
 
 Catagory_CHOICES =(
-    ("1", "Developer"),
-    ("2", "ManualTesting"),
-    ("3", "AutomationTesting"),
-    ("4", "AI"),
-    ("5", "HardwareComputer"),
-    ("6", "NewTechnology"),
+    ("1", "hardware"),
+    ("2", "Laptop"),
+    ("3", "Computer"),
+    ("4", "Web Design"),
+    ("5", "Accessories"),
+    ("6", "Refurbished"),
+    ("7", "CCTV"),
+    ("8", "Repairing")
 )
 
 class Contact(models.Model):

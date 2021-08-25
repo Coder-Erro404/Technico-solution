@@ -16,9 +16,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 # from resume_app.views import redirect_root
-admin.site.site_header = 'admin'
-admin.site.site_title = 'admin'
-admin.site.site_url = 'https://kanhaiyaresume.herokuapp.com/'
+admin.site.site_header = 'Techinco solution'
+admin.site.site_title = 'Techinco solution'
+admin.site.site_url = 'https://techincosolution.herokuapp.com/'
 admin.site.index_title = 'About_me administration'
 admin.empty_value_display = '**Empty**'
 
